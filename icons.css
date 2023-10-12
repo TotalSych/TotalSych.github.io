@@ -1,0 +1,36 @@
+.pencil-icon,
+.heart-icon,
+.delete-icon,
+.delete-icon-modal,
+.info-logo,
+.close-icon,
+.nav-search-icon,
+.arrow-up-img {
+  cursor: pointer;
+}
+
+.heart-icon:hover path {
+  fill: #cb11ab;
+  transition: all ease 0.3s;
+}
+
+.heart-icon-checked path {
+  fill: #cb11ab !important;
+}
+
+.delete-icon:hover path {
+  fill: #f55123;
+  transition: all ease 0.3s;
+}
+.delete-icon-modal:hover path {
+  fill: #f55123;
+  transition: all ease 0.3s;
+}
+
+.arrow-up-img {
+  transition: all 0.3s;
+}
+
+.arrow-rotated {
+  transform: rotate(180deg);
+}

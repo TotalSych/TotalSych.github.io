@@ -1,0 +1,42 @@
+/********* CHECKBOX *******/
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox {
+  display: none;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.checkbox-fake {
+  display: inline-block;
+  position: relative;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: solid 1px #00000033;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.checkbox-fake::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 8px;
+  background: #cb11ab url(images/checkbox-checkmark.svg) no-repeat right 50% top
+    45%;
+  opacity: 0;
+  transition: 0.15s;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.checkbox:checked + .checkbox-fake::before {
+  opacity: 1;
+}

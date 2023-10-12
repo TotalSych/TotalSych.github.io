@@ -1,0 +1,51 @@
+.missing-header-container {
+  margin: 1.6rem 0;
+}
+
+.missing-header-text {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.missing-items-container {
+  border-top: solid 1px #0000001a;
+  margin-bottom: 2rem;
+}
+
+.missing-item {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.missing-item-disc {
+  width: 39.7rem;
+  display: flex;
+}
+
+.missing-items-icons {
+  display: flex;
+  margin-top: 1.2rem;
+  align-items: start;
+  width: 10rem;
+  margin-right: 12.6rem;
+}
+
+.img-inactive {
+  filter: grayscale(100%);
+}
+
+.text-inactive {
+  color: #9797af;
+}
+
+.cart-text-inactive {
+  color: #9797af;
+  max-width: 30.9rem;
+}
+
+.app-checkout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}

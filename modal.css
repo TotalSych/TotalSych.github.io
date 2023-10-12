@@ -1,0 +1,170 @@
+.app-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #05000a4d;
+  display: none;
+}
+
+.modal-inner {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  max-width: 50rem;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 1.6rem 2.4rem 2.4rem 2.4rem;
+}
+
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.3rem;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  letter-spacing: -1%;
+}
+
+.modal-content {
+  min-height: 26.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.card-container {
+  display: flex;
+  gap: 8px;
+}
+
+.card {
+  display: flex;
+  gap: 4px;
+}
+
+.modal-text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.card-btn {
+  display: block;
+  cursor: pointer;
+  width: fit-content;
+  height: 4.4rem;
+  padding: 0 4.8rem;
+  margin-top: 1.6rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #cb11ab;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #fff;
+  text-align: center;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 2.4rem;
+}
+
+.delivery-btn {
+  width: 50%;
+  height: 3.6rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  border: solid 2px #cb11ab26;
+
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  cursor: pointer;
+}
+
+.btn-active {
+  border: solid 2px #cb11ab;
+}
+
+.modal-address-courier {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  display: none;
+}
+
+.modal-address-pickup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.address-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+.address-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  gap: 8px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.address-rating {
+  flex-direction: column;
+}
+
+.address-pickup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rating {
+  display: flex;
+  gap: 8px;
+}
+
+.rating-mark {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.rating-text {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+.rating-text-grey {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: #a0a0a4;
+}
+
+.modal-delete {
+  padding-top: 2px;
+}

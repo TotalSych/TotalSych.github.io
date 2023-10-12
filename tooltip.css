@@ -1,0 +1,114 @@
+/********* TOOLTIP *******/
+
+.disc-tooltip {
+  position: relative;
+}
+
+.delivery-text-green {
+  position: relative;
+}
+
+.total-return-container {
+  position: relative;
+}
+
+.text-discount {
+  position: relative;
+}
+
+.tooltip {
+  width: 28rem;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #fff;
+  padding: 1.1rem 1.6rem 1.3rem 1.6rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px #00000026;
+  z-index: 100;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-delivery {
+  width: 28.8rem;
+  position: absolute;
+  background-color: #fff;
+  padding: 1rem 1.6rem 1.4rem 1.6rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px #00000026;
+  z-index: 100;
+  left: -999em;
+  top: 100%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  cursor: auto;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: #000;
+}
+
+.tooltip-discount {
+  display: flex;
+  position: absolute;
+  background-color: #fff;
+  gap: 8px;
+  padding: 1.1rem 1.6rem 1.3rem 1.6rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px #00000026;
+  z-index: 100;
+  right: -999em;
+  transform: translate(9px, 4px);
+  opacity: 0;
+  transition: opacity 0.5s;
+  cursor: auto;
+}
+
+.tooltip-header {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+.tooltip-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.discount-grey-text {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: #a0a0a4;
+  text-wrap: nowrap;
+}
+
+.discount-text {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  text-wrap: nowrap;
+  text-align: end;
+}
+
+.info-logo:hover + .tooltip {
+  opacity: 1;
+}
+
+.delivery-text-green:hover .tooltip-delivery {
+  left: 50%;
+  opacity: 1;
+}
+
+.delivery-text-green:hover + .tooltip-delivery {
+  left: 50%;
+  opacity: 1;
+}
+
+.text-discount:hover .tooltip-discount {
+  right: 0%;
+  opacity: 1;
+}
