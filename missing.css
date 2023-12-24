@@ -19,7 +19,6 @@
 }
 
 .missing-item-disc {
-  width: 39.7rem;
   display: flex;
 }
 
@@ -33,6 +32,10 @@
 
 .img-inactive {
   filter: grayscale(100%);
+}
+
+.crayons-size {
+  display: none;
 }
 
 .text-inactive {

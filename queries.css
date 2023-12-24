@@ -1,4 +1,4 @@
-@media (max-width: 30em) {
+@media (max-width: 44em) {
   .app-header {
     max-width: 32rem;
   }
@@ -343,6 +343,7 @@
   }
 
   .address-rating {
+    flex-direction: row;
     padding-top: 4px;
   }
 
@@ -438,6 +439,7 @@
   }
 
   .total-return-container {
+    background-color: #f0ecf4;
     margin-bottom: 8px;
   }
 
@@ -450,6 +452,7 @@
   }
 
   .payment-check {
+    background-color: #f0ecf4;
     margin-bottom: 1.7rem;
   }
 
@@ -524,5 +527,65 @@
   .radio-fake {
     flex-grow: 0;
     width: 1.6rem;
+  }
+}
+
+@media (max-width: 64em) {
+  .nav-logo {
+    font-size: 2.2rem;
+    margin-left: -1.6rem;
+  }
+
+  .app-container-total {
+    padding: 0.5rem 2.4rem 2.4rem 2.4rem;
+  }
+
+  .delivery-date {
+    padding-top: 4px;
+  }
+
+  .payment-type {
+    margin-bottom: 0;
+    padding-top: 2px;
+  }
+
+  .payment-check {
+    gap: 6px;
+  }
+
+  .item-color-size {
+    margin-top: 5px;
+  }
+
+  .h2-app {
+    margin-top: -4px;
+  }
+
+  .delivery-details-container {
+    gap: 1.8rem;
+  }
+
+  .pickup-details {
+    gap: 6rem;
+  }
+
+  .address-rating {
+    flex-direction: row;
+  }
+
+  .checkout-delivery-text {
+    white-space: nowrap;
+  }
+
+  .checkout-recipient-container {
+    padding: 2rem 2.4rem 0.6rem 2.4rem;
+  }
+
+  .input-app {
+    gap: 0;
+  }
+
+  .input-top {
+    padding-top: 1.8rem;
   }
 }

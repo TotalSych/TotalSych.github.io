@@ -66,7 +66,7 @@ const calculateCart = () => {
     });
   cartPrice = Math.ceil(cartPrice);
   cartDiscount = Math.floor(cartDiscount);
-  cartPriceTotal = cartPrice - cartDiscount;
+  cartPriceTotal = (cartPrice - cartDiscount).toLocaleString();
   cartQuantityElement.innerHTML = `${cartQuantity} товаров`;
   if (cartQuantity > 0) {
     cartQuantityBadge.dataset.quantity = cartQuantity;
@@ -74,8 +74,8 @@ const calculateCart = () => {
   } else {
     cartQuantityBadge.style.display = "none";
   }
-  cartPriceElement.innerHTML = `${cartPrice} сом`;
-  cartDiscountElement.innerHTML = `− ${cartDiscount} сом`;
+  cartPriceElement.innerHTML = `${cartPrice.toLocaleString()} сом`;
+  cartDiscountElement.innerHTML = `− ${cartDiscount.toLocaleString()} сом`;
   cartPriceTotalElement.innerHTML = `${cartPriceTotal} сом`;
   if (payImmediatelyElement.querySelector(".checkbox").checked) {
     paymenButtonElement.innerHTML = `Оплатить ${cartPriceTotal} сом`;
@@ -87,11 +87,13 @@ const calculateProductPrice = (product) => {
   product.querySelectorAll(".h3-price").forEach((price) => {
     price.innerHTML = Math.ceil(
       product.dataset.quantity * product.dataset.price * 0.35
-    );
+    ).toLocaleString();
   });
   product.querySelectorAll(".text-discount").forEach((discount) => {
     discount.innerHTML = `${
-      Math.ceil(product.dataset.quantity * product.dataset.price) + " сом"
+      Math.ceil(
+        product.dataset.quantity * product.dataset.price
+      ).toLocaleString() + " сом"
     }
     <div class="tooltip-discount">
       <div class="tooltip-column">
@@ -288,6 +290,7 @@ const buttonCourier = document.querySelector(".button-courier");
 const deliveryTypeElement1 = document.querySelector(".delivery-type-1");
 const deliveryTypeElement2 = document.querySelector(".delivery-type-2");
 const deliveryRatingElement = document.querySelector(".address-rating");
+const radioInputs = paymentModal.querySelectorAll(".radio");
 
 deliveryModalButton.forEach((dmb) => {
   dmb.addEventListener("click", () => {
@@ -304,6 +307,9 @@ paymentModalButton.forEach((pmb) => {
 closeModalButtons.forEach((cmb) => {
   cmb.addEventListener("click", () => {
     cmb.closest(".app-modal").style.display = "none";
+    radioInputs.forEach((input) => {
+      input.checked = false;
+    });
   });
 });
 
@@ -317,11 +323,24 @@ const checkRadio = (container, radio) => {
 
 let creditCard = "images/mir.svg,1234 12•• •••• 1234";
 paymentModal.querySelectorAll(".radio-container").forEach((paymentRadio) => {
-  paymentRadio.addEventListener("click", (event) => {
+  paymentRadio.addEventListener("click", () => {
     const radioInput = paymentRadio.querySelector(".radio");
     if (!radioInput.checked) {
       creditCard = checkRadio(paymentModal, radioInput).split(",");
     }
+  });
+});
+
+paymentModal.querySelectorAll("label").forEach((label) => {
+  label.addEventListener("click", () => {
+    radioInputs.forEach((input) => {
+      if (input.id !== label.getAttribute("for")) {
+        input.checked = false;
+      } else {
+        input.checked = true;
+        creditCard = checkRadio(paymentModal, input).split(",");
+      }
+    });
   });
 });
 
@@ -340,7 +359,7 @@ chooseCardButton.addEventListener("click", () => {
 
 let address = "Бишкек, улица Ахматбека Суюмбаева, 12/1";
 deliveryModal.querySelectorAll(".radio-container").forEach((deliveryRadio) => {
-  deliveryRadio.addEventListener("click", (event) => {
+  deliveryRadio.addEventListener("click", () => {
     const radioInput = deliveryRadio.querySelector(".radio");
     if (!radioInput.checked) {
       address = checkRadio(deliveryModal, radioInput).split("$");
